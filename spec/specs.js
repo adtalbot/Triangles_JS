@@ -10,4 +10,8 @@ describe('triangleFinder', function() {
   it('will return scalene if no sides are equal', function() {
     expect(triangleFinder(2,3,4)).to.equal('This triangle is a scalene triangle.');
   });
+
+  it('will return not a triangle if one side is the same or larger than the sum of the other two sides', function() {
+    expect(triangleFinder(2,3,7)).to.equal('This is not a triangle.');
+  });
 });
